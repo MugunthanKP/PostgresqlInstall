@@ -48,27 +48,27 @@ then
     port=$Default_port
 fi
 
-# curl ${url} --output $install_path/$File_name
+curl ${url} --output $install_path/$File_name
 
-# cd $install_path
+cd $install_path
 
-# tar -xf postgresql-11.4.tar.gz
+tar -xf postgresql-11.4.tar.gz
 
-# cd postgresql-11.4
+cd postgresql-11.4
 
-# ./configure --prefix=$install_path/pg11 --without-readline --without-zlib
+./configure --prefix=$install_path/pg11 --without-readline --without-zlib
 
-# make
+make
 
-# make install
+make install
 
-# sudo mkdir $build_path
+mkdir $build_path
 
-# sudo chown $USER $build_path
+chown $USER $build_path
 
-# cd $install_path/pg11/bin
+cd $install_path/pg11/bin
 
-# ./initdb -D $build_path
+./initdb -D $build_path
 
 postgresql_conf_file=$build_path/postgresql.conf
 
